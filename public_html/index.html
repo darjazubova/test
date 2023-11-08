@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Dinamika</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="/action_page.php">
+            <label for="n"></label>
+            <input type="text" id="n" name="n"><br><br>
+            <input type="button" value="Start" onclick="palaistProgrammu()">         
+            <div id="otherButton"></div>
+        </form>
+        <script>
+            function palaistProgrammu(){
+                let n= parseInt (document.getElementById("n").value);
+                let div=document.getElementById("otherButton");
+                div.innerHTML="";
+                if( 1<n && n<7){
+                    for (let i=0; i<n; i++){
+                 let poga= document.createElement("input"); poga.value=i+1; poga.type="button";
+                 
+                div.appendChild(poga); 
+            }    
+                }
+                else (alert("Skaitlim jābūt no 1 līdz 7!"))
+            
+            }
+    </script>
+    </body>
+</html>
